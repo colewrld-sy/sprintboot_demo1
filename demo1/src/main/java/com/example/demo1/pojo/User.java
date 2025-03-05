@@ -10,7 +10,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)//自增
     @Column(name="user_id")//列名映射
     private Integer userId;
-    @Column(name="user_Name")
+    @Column(name="user_name")
     private String userName;
     @Column(name="password")
     private String password;
