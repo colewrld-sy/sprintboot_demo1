@@ -18,7 +18,7 @@ public class UserController {
     //增加
     @PostMapping
     //传入json文本自动转对象
-    public String add(@RequestBody UserDto user){
+    public ResponseMessage add(@RequestBody UserDto user){
         User userNew=userService.add(user);
         return ResponseMessage.success(userNew);
     }
