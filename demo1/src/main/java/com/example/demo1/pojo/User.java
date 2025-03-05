@@ -10,7 +10,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)//自增
     @Column(name="user_id")//列名映射
     private Integer userId;
-    @Column(name="user_name")
+    @Column(name="user_Name")
     private String userName;
     @Column(name="password")
     private String password;
@@ -29,8 +29,8 @@ public class User {
         return userName;
     }
 
-    public void setUsername(String username) {
-        this.userName = username;
+    public void setUsername(String userName) {
+        this.userName = userName;
     }
 
     public String getPassword() {
@@ -53,7 +53,7 @@ public class User {
     public String toString() {
         return "User{" +
                 "userId=" + userId +
-                ", username='" + userName + '\'' +
+                ", userName='" + userName + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 '}';

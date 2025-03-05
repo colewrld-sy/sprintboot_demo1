@@ -1,8 +1,16 @@
 package com.example.demo1.pojo.dto;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import org.hibernate.validator.constraints.Length;
+
 public class UserDto {
+    @NotBlank(message="用户名不能为空")
     private String userName;
+    @NotBlank(message="密码不能为空")
+    @Length(min=6)
     private String password;
+    @Email(message="不符合email格式")
     private String email;
 
     public String getUserName() {
