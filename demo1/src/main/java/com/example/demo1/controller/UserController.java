@@ -6,6 +6,7 @@ import com.example.demo1.pojo.User;
 import com.example.demo1.pojo.dto.UserDto;
 import com.example.demo1.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -18,7 +19,7 @@ public class UserController {
     //增加
     @PostMapping
     //传入json文本自动转对象
-    public ResponseMessage add(@RequestBody UserDto user){
+    public ResponseMessage add(@Validated @RequestBody UserDto user){
         User userNew=userService.add(user);
         return ResponseMessage.success(userNew);
     }
