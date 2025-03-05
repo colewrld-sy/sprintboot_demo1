@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotBlank;
 import org.hibernate.validator.constraints.Length;
 
 public class UserDto {
+    private Integer userId;
     @NotBlank(message="用户名不能为空")
     private String userName;
     @NotBlank(message="密码不能为空")
@@ -35,6 +36,14 @@ public class UserDto {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
     @Override
